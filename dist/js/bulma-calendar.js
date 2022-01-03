@@ -58666,8 +58666,13 @@ var datePicker = function (_EventEmitter) {
                 this._toggleNextButton();
             }
 
+            if (typeof this.options.formats.navigationYear === 'function') {
+                this.options.formats.navigationYear(this._visibleDate);
+            } else {
+                this._ui.navigation.year.innerHTML = __WEBPACK_IMPORTED_MODULE_2_date_fns__["l" /* format */](this._visibleDate, this.options.formats.navigationYear, { locale: this.locale });
+            }
+
             this._ui.navigation.month.innerHTML = __WEBPACK_IMPORTED_MODULE_2_date_fns__["l" /* format */](this._visibleDate, this.options.formats.navigationMonth, { locale: this.locale });
-            this._ui.navigation.year.innerHTML = __WEBPACK_IMPORTED_MODULE_2_date_fns__["l" /* format */](this._visibleDate, this.options.formats.navigationYear, { locale: this.locale });
 
             this._renderDays();
 
