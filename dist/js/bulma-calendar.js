@@ -58666,12 +58666,7 @@ var datePicker = function (_EventEmitter) {
                 this._toggleNextButton();
             }
 
-            if (typeof this.options.formats.navigationYear === 'function') {
-                this._ui.navigation.year.innerHTML = this.options.formats.navigationYear(this._visibleDate);
-            } else {
-                this._ui.navigation.year.innerHTML = __WEBPACK_IMPORTED_MODULE_2_date_fns__["l" /* format */](this._visibleDate, this.options.formats.navigationYear, { locale: this.locale });
-            }
-
+            this._ui.navigation.year.innerHTML = typeof this.options.formats.navigationYear === 'function' ? this.options.formats.navigationYear(this._visibleDate) : __WEBPACK_IMPORTED_MODULE_2_date_fns__["l" /* format */](this._visibleDate, this.options.formats.navigationYear, { locale: this.locale });
             this._ui.navigation.month.innerHTML = __WEBPACK_IMPORTED_MODULE_2_date_fns__["l" /* format */](this._visibleDate, this.options.formats.navigationMonth, { locale: this.locale });
 
             this._renderDays();
@@ -59247,7 +59242,7 @@ var datePicker = function (_EventEmitter) {
 
 /* harmony default export */ __webpack_exports__["a"] = (function (data) {
     return '' + data.years.map(function (year) {
-        return '\n        <div class="datepicker-year" data-year="' + Object(__WEBPACK_IMPORTED_MODULE_0_date_fns__["l" /* format */])(year, 'yyyy', { locale: data.locale }) + '">\n            <span class="item">' + Object(__WEBPACK_IMPORTED_MODULE_0_date_fns__["l" /* format */])(year, data.format, { locale: data.locale }) + '</span>\n        </div>\n    ';
+        return '\n        <div class="datepicker-year" data-year="' + Object(__WEBPACK_IMPORTED_MODULE_0_date_fns__["l" /* format */])(year, 'yyyy', { locale: data.locale }) + '">\n            <span class="item">' + (typeof data.format === 'function' ? data.format(year) : Object(__WEBPACK_IMPORTED_MODULE_0_date_fns__["l" /* format */])(year, data.format, { locale: data.locale })) + '</span>\n        </div>\n    ';
     }).join('');
 });
 

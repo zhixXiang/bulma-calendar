@@ -496,13 +496,7 @@ export default class datePicker extends EventEmitter {
             this._toggleNextButton();
         }
 
-        if(typeof this.options.formats.navigationYear === 'function'){
-            this._ui.navigation.year.innerHTML = this.options.formats.navigationYear(this._visibleDate);
-        }
-        else{
-            this._ui.navigation.year.innerHTML  = dateFns.format(this._visibleDate, this.options.formats.navigationYear, {locale: this.locale});
-        }
-
+        this._ui.navigation.year.innerHTML = typeof this.options.formats.navigationYear === 'function' ? this.options.formats.navigationYear(this._visibleDate) : dateFns.format(this._visibleDate, this.options.formats.navigationYear, {locale: this.locale});
         this._ui.navigation.month.innerHTML = dateFns.format(this._visibleDate, this.options.formats.navigationMonth, {locale: this.locale});
 
 
