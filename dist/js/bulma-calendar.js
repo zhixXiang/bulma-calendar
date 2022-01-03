@@ -58667,7 +58667,7 @@ var datePicker = function (_EventEmitter) {
             }
 
             if (typeof this.options.formats.navigationYear === 'function') {
-                this.options.formats.navigationYear(this._visibleDate);
+                this._ui.navigation.year.innerHTML = this.options.formats.navigationYear(this._visibleDate);
             } else {
                 this._ui.navigation.year.innerHTML = __WEBPACK_IMPORTED_MODULE_2_date_fns__["l" /* format */](this._visibleDate, this.options.formats.navigationYear, { locale: this.locale });
             }
