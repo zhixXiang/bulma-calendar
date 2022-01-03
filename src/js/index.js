@@ -850,6 +850,9 @@ export default class bulmaCalendar extends EventEmitter {
         if (!type.BooleanParse(this.options.showClearButton)) {
             this._ui.footer.clear.classList.add('is-hidden');
         }
+        if (!type.BooleanParse(this.options.showCancelButton)) {
+            this._ui.footer.cancel.classList.add('is-hidden');
+        }
 
         if (this.options.closeOnSelect && this._ui.footer.validate) {
             this._ui.footer.validate.classList.add('is-hidden');

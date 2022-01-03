@@ -15,6 +15,7 @@ const defaultOptions = {
     showButtons:         true,
     showTodayButton:     true,
     showClearButton:     true,
+    showCancelButton:     true,
     cancelLabel:         'Cancel',
     clearLabel:          'Clear',
     todayLabel:          'Today',

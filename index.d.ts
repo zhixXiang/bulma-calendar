@@ -132,6 +132,13 @@ declare namespace bulmaCalendar {
     showClearButton?: boolean;
 
     /**
+     * Show/Hide Cancel Button
+     *
+     * @default true
+     */
+    showCancelButton?: boolean;
+
+    /**
      * Cancel button label
      *
      * @default 'Cancel'

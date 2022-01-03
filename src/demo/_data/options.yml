@@ -58,6 +58,10 @@
   type: Boolean
   description: 'Show/Hide Clear Button'
   value: 'true'
+- name: 'showCancelButton'
+  type: Boolean
+  description: 'Show/Hide Cancel Button'
+  value: 'true'
 - name: 'cancelLabel'
   type: String
   description: 'Cancel button label'
