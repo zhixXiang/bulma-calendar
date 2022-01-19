@@ -46021,6 +46021,8 @@ var bulmaCalendar = function (_EventEmitter) {
             if (!this.isOpen() || this.options.closeOnSelect) {
                 this.save();
             }
+
+            this.options.onClearCallback();
         }
     }, {
         key: 'onCancelClickDateTimePicker',
@@ -64600,6 +64602,7 @@ var defaultOptions = {
     toggleOnInputClick: true,
     onReady: null,
     onValidate: null,
+    onClearCallback: function onClearCallback() {},
     formats: {
         header: 'LLLL yyyy',
         navigationMonth: 'LLLL',

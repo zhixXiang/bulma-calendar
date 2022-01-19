@@ -372,6 +372,8 @@ export default class bulmaCalendar extends EventEmitter {
             this.save();
         }
 
+        this.options.onClearCallback();
+
     }
 
     onCancelClickDateTimePicker(e) {

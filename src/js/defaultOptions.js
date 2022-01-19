@@ -41,6 +41,7 @@ const defaultOptions = {
     toggleOnInputClick:  true,
     onReady:             null,
     onValidate:          null,
+    onClearCallback: () => {},
     formats:              {
         header:          'LLLL yyyy',
         navigationMonth: 'LLLL',

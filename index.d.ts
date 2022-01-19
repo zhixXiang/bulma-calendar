@@ -283,6 +283,11 @@ declare namespace bulmaCalendar {
      * Callback to trigger once picker initiated
      */
     onReady?: () => void;
+
+    /**
+     * Callback to click clear button
+     */
+    onClearCallback?: () => void;
     icons?: {
       /**
        * Previous button icon
