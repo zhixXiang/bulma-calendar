@@ -519,7 +519,7 @@ export default class datePicker extends EventEmitter {
             end:   undefined,
         };
 
-        this._setVisibleDate(today);
+        // this._setVisibleDate(today);
         this.refresh();
 
     }

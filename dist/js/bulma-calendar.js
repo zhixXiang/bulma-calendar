@@ -58693,7 +58693,7 @@ var datePicker = function (_EventEmitter) {
                 end: undefined
             };
 
-            this._setVisibleDate(today);
+            // this._setVisibleDate(today);
             this.refresh();
         }
     }, {
