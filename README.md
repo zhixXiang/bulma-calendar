@@ -1,3 +1,21 @@
+# new-feature
+1. selectYear and navigationYear can use function now.
+Support custom country year, you can do:
+ROC 民國年
+```
+formats: {
+      header: 'LLL yyy',
+      navigationMonth: 'LLL',
+      navigationYear: (year) => year.getFullYear() - 1911 + '年',
+      selectMonth: 'LLL',
+      selectYear: (year) => year.getFullYear() - 1911,
+      weekday: 'ccccc'
+    }
+```
+
+2. Add showCancelButton option
+3. Add onClearCallback, and when click clear button not force to select today now.
+
 # bulma-calendar
 Bulma's extension to display a calendar. It can be used on page as large calendar with apointments or in modal/popup for datepicker.
 
