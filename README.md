@@ -1,8 +1,8 @@
 # new-feature
 1. selectYear and navigationYear can use function now.
-Support custom country year, you can do:
-ROC 民國年
+Support custom country year, you can do like this: <br />
 ```
+// ROC民國年
 formats: {
       header: 'LLL yyy',
       navigationMonth: 'LLL',
